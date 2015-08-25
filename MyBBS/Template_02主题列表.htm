@@ -1,0 +1,75 @@
+<span id="Page_Break_Head"></span>
+<table width="98%" align="center" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0"> <a href="#">
+		<font color="#FFFFFF">{Board_Name}</font></a></td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<!--Split-->
+			<tr>
+				<td align="middle" class="Board_Sub">　</td>
+				<td align="middle" class="Board_Sub">　</td>
+				<td width="45%" class="Board_Sub">主题名称</td>
+				<td nowrap align="middle" width="14%" class="Board_Sub">主题发起人</td>
+				<td nowrap align="middle" width="7%" class="Board_Sub">回复</td>
+				<td nowrap align="middle" width="7%" class="Board_Sub">点阅</td>
+				<td nowrap align="left" width="27%" class="Board_Sub">最后发表</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="left" colspan="5"><b>置顶主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">
+				<img src="folder_post_icons/icon{BBS_Icon}.gif" border="0"></td>
+				<td class="row1">
+				<a title="这个主题开始于: {BBS_PostTime}" href="ListView.asp?BBS_ID={BBS_ID}&Board_ID={Board_ID}">
+				{BBS_Subject}</a> 　<span class="desc">{BBS_SubjectDesc}</span>
+				</td>
+				<td class="row1" align="middle">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="row1" align="middle">{BBS_Reply}</td>
+				<td class="row1" align="middle">{BBS_View}</td>
+				<td class="row1"><span class="desc">{BBS_LastPostTime}</span><br>
+				最后发表: <b><a href="ViewUser.asp?Users_ID={BBS_LastPostUserID}">{BBS_LastPostUser}</a></b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" colspan="5"><b>板块主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1" align="middle">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">
+				<img src="folder_post_icons/icon{BBS_Icon}.gif" border="0"></td>
+				<td class="row1">
+				<a title="这个主题开始于: {BBS_PostTime}" href="ListView.asp?BBS_ID={BBS_ID}&Board_ID={Board_ID}">
+				{BBS_Subject}</a> 　<span class="desc">{BBS_SubjectDesc}</span></td>
+				<td class="row2" align="middle">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="row1" align="middle">{BBS_Reply}</td>
+				<td class="row2" align="middle">{BBS_View}</td>
+				<td class="row2"><span class="desc">{BBS_LastPostTime}</span><br>
+				最后发表: <b><a href="ViewUser.asp?Users_ID={BBS_LastPostUserID}">{BBS_LastPostUser}</a></b></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<span id="Page_Break_Foot"></span>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线-->

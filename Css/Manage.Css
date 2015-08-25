@@ -1,0 +1,133 @@
+a:link							{
+											color:#190552; 
+											text-decoration:none
+										}
+a:active						{
+											color:#190552; 
+											text-decoration:none
+										}
+a:visited						{
+											color:#29098A; 
+											text-decoration:none
+										}
+a:hover							{
+											color:#29098A; 
+											text-decoration:underline
+										}
+
+*										{	
+											font-size: 12px;
+										}
+body								{	
+											margin: 0px; 
+										}
+td									{
+											white-space: nowrap;
+										}
+.wintitle						{
+											position:relative;
+											left:-10px;
+											z-index:0;
+											background: url("../Manage/Css/images/tab1.gif");
+											background-repeat: no-repeat;
+											width:150px;
+											height:25px;
+											padding-left:10px;
+											padding-top:4px;
+											cursor:default;
+										}
+.win								{
+											position:absolute; 
+											width:100%; 
+											height:100%; 
+											left: 1px; 
+											top: 19px;
+										}
+.menuaa
+										{
+											position: absolute; 
+											width: 100px; 
+											height: 10px; 
+											left=10; 
+											z-index: 1; 
+											border-left-style: solid; 
+											border-left-width: 1px; 
+											border-right-style: solid; 
+											border-right-width: 1px; 
+											border-bottom-style: solid; 
+											border-bottom-width: 1px; 
+											display: none; 
+											background-color:#F9F8F7
+										}
+.Link								{
+											color: #000000; 
+											text-decoration: none;  
+											CURSOR: default;
+										}
+.MenuItem						{
+											position: absolute; 
+											display: none; 
+											top: 0px; 
+											border-left: 1px #666666 solid; 
+											border-bottom: 1px #666666 solid; 
+											cursor: default; 
+											filter:progid:dximagetransform.microsoft.dropshadow(color=#DDDDDD ,offx=3,offy=3,positive=true)
+										}
+.Menu								{
+											PADDING-LEFT:4px;
+											PADDING-RIGHT:4px;
+											CURSOR:default
+										}
+.MenuOver						{
+											PADDING-LEFT:3px;
+											PADDING-RIGHT:3px;
+											BACKGROUND-COLOR:#B5BED6;
+											BORDER:1px solid #08246B;
+											CURSOR:default
+										}
+.MenuTop						{ 
+											border-left: 1px solid #000000; 
+											border-right: 1px solid #000000; 
+											border-top: 1px solid #000000; 
+											border-bottom-width: 1px
+										}
+.MenuTopLeft				{ 
+											border-left-width: 1px; 
+											border-right-width: 1px; 
+											border-top-width: 1px; 
+											border-bottom: 1px solid #000000
+										}
+.MenuBottom					{
+											border-left: 1px solid #000000; 
+											border-right: 1px solid #000000;
+											border-top-width: 1px;
+											border-bottom: 1px solid #000000
+										}
+.tdin								{
+											background-color:#F1F1F1;
+											color:#FF0000;
+											padding:1px;
+											cursor:hand;
+										}
+.InputBox						{
+											border-style: solid; 
+											border-width: 1px
+										}
+.tab-on							{
+											border-style: solid; 
+											border-width: 1px; 
+											background-color: #FFFFFF;  
+											CURSOR: pointer;
+										}
+.tab-off						{
+											border-style: solid; 
+											border-width: 1px; 
+											background-color: #f6f6f6;  
+											CURSOR: pointer; 
+										}
+.hide-table					{
+											DISPLAY: none
+										}
+.show-table					{
+											DISPLAY: block
+										}

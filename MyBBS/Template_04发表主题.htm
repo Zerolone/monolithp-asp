@@ -1,0 +1,79 @@
+<!--发表主题部分开始-->
+<table width="98%" align="center" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<form action="{ThisPage}" method="post" name="ListAddFrm" id="ListAddFrm">
+		<input name="BBS_Board_ID" type="hidden" value="{Board_ID}">
+		<input name="FormPage" type="hidden" value="{FormPage}">
+		<tr>
+			<td class="Board_Title" colspan="2"><b>
+			在 {Board_Name} 发表新的主题</b>
+			</td>
+		</tr>
+		<tr>
+			<td class="List_Head" colspan="2">主题设置</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%">主题名称</td>
+			<td class="List_Right" width="77%">
+			<input class="InputBox" tabindex="1" maxlength="50" size="40" name="BBS_Subject"> 
+			*</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%">主题说明</td>
+			<td class="List_Right" width="77%">
+			<input class="InputBox" tabindex="2" maxlength="40" size="40" name="BBS_SubjectDesc"></td>
+		</tr>
+		<tr>
+			<td class="List_Head" colspan="2">主题内容</td>
+		</tr>
+		<tr>
+			<td class="List_Left" align="middle" width="23%">　</td>
+			<td class="List_Right" valign="top" width="77%">
+			<textarea class="InputBox" tabindex="5" name="BBS_Content" rows="20" cols="80"></textarea> 
+			*</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%"><b>主题图标</b></td>
+			<td class="List_Right" width="77%">
+			<input type="radio" value="1" name="BBS_Icon" checked class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon1.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="2" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon2.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="3" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon3.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="4" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon4.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="5" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon5.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="6" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon6.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="7" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon7.gif" align="middle"><br>
+			<input type="radio" value="8" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon8.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="9" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon9.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="10" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon10.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="11" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon11.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="12" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon12.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="13" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon13.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="14" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon14.gif" align="middle"><br>
+			<input type="radio" value="0" name="BBS_Icon" class="InputBox">&nbsp; [ Use None 
+			] </td>
+		</tr>
+		<tr>
+			<td  class="List_Head" colspan="2">
+			<p align="center">
+			<input class="InputBox" tabindex="7" type="submit" value=" 发 表 新 的 主 题 " name="submit">&nbsp;
+			<input class="InputBox" tabindex="8" type="submit" value=" 预 览 主 题 " name="preview">
+			</p>
+			</td>
+		</tr>
+	</form>
+</table>
+<!--发表主题部分结束-->
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线-->

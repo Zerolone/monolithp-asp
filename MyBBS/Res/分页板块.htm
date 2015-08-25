@@ -1,0 +1,103 @@
+<style>
+<!--
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+
+
+td { font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+body{ font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+
+a:link, a:visited, a:active{	background: transparent;	color: #3A4F6C;	text-decoration: none;}
+a:hover{ color: #5176B5;}
+
+.InputBox2						{	border: 1px solid #999999	}
+
+.TdTitle {color: #3A4F6C;  font-weight:bold}
+.darkrow1 { background-color: #C2CFDF; color:#4C77B6; }
+.row4 { background-color: #E4EAF2 }
+.row2 { background-color: #DFE6EF }
+.desc { font-size:10px; color:#434951 }
+.darkrow2 { background-color: #BCD0ED; color:#3A4F6C; }
+
+-->
+</style>
+
+<!--Split-->
+<table width="100%" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<tr>
+		<td background="images/tile_back.gif" height="32">&nbsp;<img height="8" src="images/nav_m.gif" width="8" border="0">
+		<b><a href="#"><font color="#FFFFFF">{Board_Name}</font></a></b> </td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<!--Split-->
+			<tr>
+				<td align="middle" background="images/tile_sub.gif">
+				<img height="1" src="images/blank.gif" width="20"></td>
+				<td align="middle" background="images/tile_sub.gif">
+				<img height="1" src="images/blank.gif" width="20"></td>
+				<td width="45%" background="images/tile_sub.gif" class="TdTitle">&nbsp;主题名称</td>
+				<td nowrap align="middle" width="14%" background="images/tile_sub.gif" class="TdTitle">&nbsp;主题发起人</td>
+				<td nowrap align="middle" width="7%" background="images/tile_sub.gif" class="TdTitle">&nbsp;回复</td>
+				<td nowrap align="middle" width="7%" background="images/tile_sub.gif" class="TdTitle">&nbsp;点阅</td>
+				<td nowrap align="left" width="27%" background="images/tile_sub.gif" class="TdTitle">&nbsp;最后发表</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="darkrow1" align="middle" height="24">　</td>
+				<td class="darkrow1" align="middle" height="24">　</td>
+				<td class="darkrow1" align="left" colspan="5" height="24">&nbsp;<b>置顶主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row4">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">
+				<img alt="置顶" src="images/f_pinned.gif" border="0"></td>
+				<td class="row4"><b>锁定： 
+				<a title="这个主题开始于: Jul 9 2004, 12:32 AM" href="#">{BBS_Subject}</a></b>
+				<span class="small">(Pages <a href="#">1 </a><a href="#">2 </a>
+				<a href="#">3 </a><a href="#">...7 </a>)</span> <br>
+				　<span class="desc">abcdefghijklmn</span> </td>
+				<td class="row4" align="middle"><a href="#">{BBS_PostUser}</a></td>
+				<td class="row4" align="middle"><a href="#">{BBS_Reply}</a></td>
+				<td class="row4" align="middle">{BBS_View}</td>
+				<td class="row4"><span class="desc">{BBS_LastPostTime}<br>
+				<a href="#">最后发表:</a> <b><a href="#">{BBS_LastPostUser}</a></b></span></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="darkrow1" align="middle">　</td>
+				<td class="darkrow1" align="middle">　</td>
+				<td class="darkrow1" colspan="5">&nbsp;<b>板块主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row4" align="middle">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">　</td>
+				<td class="row4">
+				<a title="这个主题开始于: Dec 20 2004, 07:50 PM" href="#">{BBS_Subject}</a>
+				<br>
+				　<span class="desc">abcdefghijklmn</span></td>
+				<td class="row2" align="middle"><a href="#">{BBS_PostUser}</a></td>
+				<td class="row4" align="middle"><a href="#">{BBS_Reply}</a></td>
+				<td class="row2" align="middle">{BBS_View}</td>
+				<td class="row2"><span class="desc">{BBS_LastPostTime}<br>
+				<a href="#">最后发表:</a> <b>
+				<a href="#">{BBS_LastPostUser}</a></b></span></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="darkrow2" height="24">&nbsp; 15 用户在当前板块 (13 游客 0 匿名用户)</td>
+	</tr>
+	<tr>
+		<td class="row2" height="24">&nbsp; 2 会员:<a href="#">beenieman10</a>, <a href="#">ChRiIiS</a></td>
+	</tr>
+	<tr>
+		<td class="darkrow2">　</td>
+	</tr>
+</table>

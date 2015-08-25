@@ -1,0 +1,142 @@
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><table cellspacing="0" width="98%" align="center" height="26" cellpadding="0">
+	<tr>
+		<td><span id="Page_Break_Head"></span></td>
+		<td align="right">
+		<a href="ListAddPost.asp?Board_ID={Board_ID}&BBS_Root={BBS_ID}">
+		<img alt="发表新的主题" src="images/t_reply.gif" border="0" width="89" height="27"></a><a href="ListAdd.asp?Board_ID={Board_ID}"><img alt="发表新的主题" src="images/t_new.gif" border="0"></a></td>
+	</tr>
+</table>
+<table width="98%" align="center" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0">{BBS_Subject}</td>
+	</tr>
+	<tr>
+		<td align="right" width="100%" class="Board_Sub">
+		<a href="#">跟踪主题</a> | <a href="#">邮寄主题</a> | <a href="#">打印主题</a>&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td class="List_Head" width="21%">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="List_Head" width="79%">
+				<img src="../images/to_post_off.gif" border="0"> {BBS_PostTime} </td>
+			</tr>
+			<tr>
+				<td class="row1" width="1%" valign="top"><br>
+				发表总数: {Users_Subject}<br>
+				最后登陆: {Users_LastLogin}<br>
+				会员编号: {BBS_PostUserID}<br>
+				　</span></td>
+				<td width="99%" class="row1" valign="top">{BBS_Content}<br>
+				<br>
+				--------------------<br>
+				{Users_Sign}</td>
+			</tr>
+			<tr>
+				<td class="List_Head" width="21%" align="center">
+				　</td>
+				<td class="List_Head" width="79%">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><a href="#">
+						<img alt="Go to the top of the page" src="../images/p_up.gif" border="0"></a></td>
+						<td align="right">
+						<a title="回复这个帖子" href="ListAddPost.asp?Board_ID={Board_ID}&BBS_Root={BBS_ID}"><img alt="Quote Post" src="../images/p_quote.gif" border="0"></a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#8394B2" height="5">
+		<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--></td>
+	</tr>
+<!--帖子列表部分-->
+<!--Split-->
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td class="List_Head" width="21%" ><a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="List_Head" width="79%" height="24">
+				<table border="0" width="100%">
+					<tr>
+						<td><img src="../images/to_post_off.gif" border="0"> {BBS_PostTime}</td>
+						<td align="right">&nbsp;发表于:#{Level}</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="row1" width="1%" valign="top"><br>
+				发表总数: {Users_Subject}<br>
+				最后登陆: {Users_LastLogin}<br>
+				会员编号: {BBS_PostUserID}<br>
+				　</span></td>
+				<td width="99%" class="row1" valign="top"><%=Rs(6)%>{BBS_Content}<br>
+				<br>
+				--------------------<br>
+				{Users_Sign}</td>
+			</tr>
+			<tr>
+				<td class="List_Head" width="21%" align="center">
+				　</td>
+				<td class="List_Head" width="79%">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><a href="#">
+						<img alt="Go to the top of the page" src="../images/p_up.gif" border="0"></a></td>
+						<td align="right">
+						<a title="回复这个帖子" href="ListAddPost.asp?Board_ID={Board_ID}&BBS_Root={BBS_ID}"><img alt="Quote Post" src="../images/p_quote.gif" border="0"></a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#8394B2" height="5">
+		<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--></td>
+	</tr>
+<!--Split-->
+<!--帖子列表部分结束-->
+</table>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><table cellspacing="0" width="98%" align="center" height="26" cellpadding="0">
+	<tr>
+		<td><span id="Page_Break_Foot"></span></td>
+		<td align="right">
+		<a title="开启快速回复窗口" href="javascript:ShowOrHideTable('FrmFastReply');">
+		<img alt="Fast Reply" src="images/t_qr.gif" border="0" width="89" height="27"></a><a title="回复这个帖子" href="ListAddPost.asp?Board_ID={Board_ID}&BBS_Root={BBS_ID}"><img alt="发表新的主题" src="images/t_reply.gif" border="0" width="89" height="27"></a><a href="ListAdd.asp?Board_ID={Board_ID}"><img alt="发表新的主题" src="images/t_new.gif" border="0"></a></td>
+	</tr>
+</table>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><table id="FrmFastReply" width="98%" align="center" cellspacing="0" cellpadding="0" style="border: 1px solid #000000; display:none;">
+	<form action="ListSave.asp" method="post" name="ReplyTopic">
+		<input name="BBS_Root" type="hidden" value="{BBS_ID}">
+		<tr>
+			<td class="Board_Title">
+			<img height="8" src="images/nav_m.gif" width="8" border="0">快速回复</td>
+		</tr>
+		<tr>
+			<td align="center">
+			<!--分割线-->
+			<img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><br>
+			<textarea class="InputBox" tabindex="1" name="BBS_Content" rows="8" cols="70"></textarea><br>
+			<br>
+			<input class="InputBox" type="CheckBox" checked value="yes" name="enablesig"> 
+			启用签名档<br>
+			<br>
+			<input class="InputBox" accesskey="s" tabindex="2" type="submit" value=" 加 入 回 复 " name="submit">
+			<input class="InputBox" onclick="ShowOrHideTable('FrmFastReply');" type="button" value="关闭快速回复" name="qrc"><br>
+			<!--分割线-->
+			<img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线-->
+			</td>
+		</tr>
+	</form>
+</table>

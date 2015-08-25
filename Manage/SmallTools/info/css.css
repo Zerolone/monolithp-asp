@@ -1,0 +1,40 @@
+H2 {
+	MARGIN-TOP: 12px; FONT-SIZE: 90%; MARGIN-LEFT: -2%; COLOR: #484848; FONT-FAMILY: Tahoma
+}
+H3 {
+	FONT-SIZE: 11px; MARGIN-LEFT: -1%; COLOR: #484848; FONT-FAMILY: Tahoma
+}
+H4 {
+	FONT-SIZE: 11px; COLOR: #484848; FONT-FAMILY: Tahoma
+}
+td {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #828282;
+	text-decoration: none;
+	border: none;
+}
+font {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #1890E1;
+	text-decoration: none;
+	border: none;
+	font-weight: bold;
+}
+.f {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #FF2D00;
+	text-decoration: none;
+	border: none;
+	font-weight: normal;
+}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FB5E3C;
+	text-decoration: none;
+	border: none;
+}

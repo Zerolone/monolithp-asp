@@ -1,0 +1,60 @@
+{Monolith_Head} {Monolith_Sep}
+<table cellspacing="0" cellpadding="4" width="98%" border="0" class="Board_Table" align="center">
+	<tr>
+		<td class="Board_Title" colspan="2">
+		<img height="8" src="/images/nav_m.gif" width="8" border="0"> 留言本</td>
+	</tr>
+	<!--Split-->
+	<tr>
+		<td class="List_Head" width="21%"><a href="mailto:{GuestBook_Mail}">{GuestBook_Users_Name}</a></td>
+		<td class="List_Head" width="79%" height="24">
+		<img src="/images/to_post_off.gif" border="0"> {GuestBook_Postdate}</td>
+	</tr>
+	<tr>
+		<td class="row1" width="1%" valign="top">　</td>
+		<td width="99%" class="row1" valign="top">{GuestBook_Content}</td>
+	</tr>
+	<tr>
+		<td class="List_Head" width="21%" align="center"></td>
+		<td class="List_Head" width="79%"><a href="#">
+		<img alt="返回顶上" src="/images/p_up.gif" border="0"></a></td>
+	</tr>
+	<tr>
+		<td class="Board_Foot" height="5" colspan="2">{Monolith_Sep}</td>
+	</tr>
+	<!--Split-->
+</table>
+{Monolith_Sep}
+<table cellspacing="0" cellpadding="4" width="98%" border="0" class="Board_Table" align="center">
+	<form action="{ThisPage}" method="post" name="FrmPost">
+		<tr>
+			<td class="Board_Title" colspan="2">
+			<img height="8" src="/images/nav_m.gif" width="8" border="0"> 快速回复</td>
+		</tr>
+		<tr>
+			<td width="143" align="right" class="List_Left">姓名： </td>
+			<td class="List_Right">
+			<input name="GuestBook_Users_Name" class="InputBox" size="18" maxlength="10"> 
+			*</td>
+		</tr>
+		<tr>
+			<td width="143" align="right" class="List_Left">信箱：</td>
+			<td class="List_Right">
+			<input name="GuestBook_Mail" class="InputBox" size="18" maxlength="30">
+			</td>
+		</tr>
+		<tr>
+			<td align="right" valign="top" width="143" class="List_Left">内容： 
+			</td>
+			<td class="List_Right"> 
+        <textarea name=GuestBook_Content cols=50 rows=4 class="InputBox"></textarea>
+      		</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2" class="List_Head">
+			<input type="submit" name="Submit" value=" 提 交 留 言 " class="InputBox">
+			<input type="hidden" name="send" value="ok"></td>
+		</tr>
+	</form>
+</table>
+{Monolith_Sep} {Monolith_Foot}

@@ -1,0 +1,34 @@
+'-----------------------------------------------
+'作者:------------------------------------------
+'日期:20041123----------------------------------
+'功能:一级一级的创建文件夹， 存在则不建立-------
+'参数:文件夹路经--------------------------------
+'版本:1.0---------------------------------------
+'-----------------------------------------------
+Function CreateFolderII(FolderPath)
+	Dim FSO, FolderPath_Arr, i, FolderPath_Tmp, TheFolderPath
+	
+	FolderPath = Replace(FolderPath,"\","/")
+	Set FSO = Server.CreateObject("Scripting.FileSystemObject")
+
+	FolderPath_Arr = split(FolderPath,"/")
+
+	For i = 0 to UBound(FolderPath_Arr)
+		if i = 0 then
+			FolderPath_Tmp = FolderPath_Arr(0) & "/"
+		Else
+			FolderPath_Tmp = FolderPath_Tmp & FolderPath_Arr(i) & "/"
+		end if
+		if i > 0 then
+			TheFolderPath = left(FolderPath_Tmp, len(FolderPath_Tmp)-1)
+			if not FSO.FolderExists(TheFolderPath) then FSO.CreateFolder TheFolderPath
+		end if
+	Next
+	set FSO = nothing
+	if err.number<>0 then
+		CreateFolderII = false
+		err.Clear
+	else
+		CreateFolderII = true
+	end if
+End Function

@@ -1,0 +1,22 @@
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+
+td { font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+body{ font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+
+a:link, a:visited, a:active{	background: transparent;	color: #3A4F6C;	text-decoration: none;}
+a:hover{ color: #5176B5;}
+
+.InputBox						{	border: 1px solid #999999	}
+
+.TdTitle {color: #3A4F6C;  font-weight:bold}
+.darkrow1 { background-color: #C2CFDF; color:#4C77B6; }
+.row4 { background-color: #E4EAF2 }
+.row2 { background-color: #DFE6EF }
+.desc { color:#434951 }
+.darkrow2 { background-color: #BCD0ED; color:#3A4F6C; }
+
+.pformstrip { background-color: #D1DCEB; color:#3A4F6C;font-weight:bold;padding:7px;margin-top:1px }
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+.pformleft  { background-color: #F5F9FD; padding:6px; margin-top:1px;width:25%; border-top:1px solid #C2CFDF; border-right:1px solid #C2CFDF; }
+
+.pformright { background-color: #F5F9FD; padding:6px; margin-top:1px;border-top:1px solid #C2CFDF; }

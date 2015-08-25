@@ -1,0 +1,19 @@
+<script language="javascript">
+	document.write("你访问的：“");
+	document.write(document.location.href);
+	document.write("”不存在。");
+
+	document.write("<hr>");
+  var str1 = document.location.href;
+//  var str2 = str1.lastIndexOf("/");
+//	var str3 = str1.substring(str2+1,str1.length);
+//	document.write(str3);
+//	var src="ErrorPage/MakeHtmlPage.asp?FileName=" + str3;
+
+	var src="/ErrorPage/MakeHtmlPage.asp?FileName=" + str1;
+	
+	document.write("<iframe marginwidth='0' marginheight='0' height='100%' width='100%' scrolling='no' border='0' frameborder='0' name='I1' src="+ src +">浏览器不支持嵌入式框架，或被配置为不显示嵌入式框架。</iframe>");
+	
+//	I1.document.location="MakeHtmlPage.asp?FileName=" + str3;
+
+</script>

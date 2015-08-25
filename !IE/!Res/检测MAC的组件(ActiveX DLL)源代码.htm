@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=content-type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.3790.186" name=GENERATOR></head>
+<BODY style="CURSOR: auto">* written by Jaron ,2003-11-21 */ <BR>/* 原出处：CSDN文档中心 
+http://www.csdn.net/develop WEB技术中文网 http://www.jaron.cn */ <BR>/* 
+转载请注明出处和保留此版权信息 */ <BR>/* 欢迎使用SiteManager-CMS Server 网站管理系统 
+http://sitemanager.cnzone.net */ <BR>/* 检测MAC的组件(ActiveX DLL)源代码 <BR>/* 
+在ASP中，通过自写组件的方式获取服务器当前的网卡地址 <BR><BR>Option Explicit <BR><BR>Private Const 
+NCBASTAT = &amp;H33 <BR>Private Const NCBNAMSZ = 16 <BR>Private Const 
+HEAP_ZERO_MEMORY = &amp;H8 <BR>Private Const HEAP_GENERATE_EXCEPTIONS = &amp;H4 
+<BR>Private Const NCBRESET = &amp;H32 <BR><BR>Private Type NCB <BR>ncb_command 
+As Byte 'Integer <BR>ncb_retcode As Byte 'Integer <BR>ncb_lsn As Byte 'Integer 
+<BR>ncb_num As Byte ' Integer <BR>ncb_buffer As Long 'String <BR>ncb_length As 
+Integer <BR>ncb_callname As String * NCBNAMSZ <BR>ncb_name As String * NCBNAMSZ 
+<BR>ncb_rto As Byte 'Integer <BR>ncb_sto As Byte ' Integer <BR>ncb_post As Long 
+<BR>ncb_lana_num As Byte 'Integer <BR>ncb_cmd_cplt As Byte 'Integer 
+<BR>ncb_reserve(9) As Byte ' Reserved, must be 0 <BR>ncb_event As Long <BR>End 
+Type <BR>Private Type ADAPTER_STATUS <BR>adapter_address(5) As Byte 'As String * 
+6 <BR>rev_major As Byte 'Integer <BR>reserved0 As Byte 'Integer <BR>adapter_type 
+As Byte 'Integer <BR>rev_minor As Byte 'Integer <BR>duration As Integer 
+<BR>frmr_recv As Integer <BR>frmr_xmit As Integer <BR>iframe_recv_err As Integer 
+<BR>xmit_aborts As Integer <BR>xmit_success As Long <BR>recv_success As Long 
+<BR>iframe_xmit_err As Integer <BR>recv_buff_unavail As Integer <BR>t1_timeouts 
+As Integer <BR>ti_timeouts As Integer <BR>Reserved1 As Long <BR>free_ncbs As 
+Integer <BR>max_cfg_ncbs As Integer <BR>max_ncbs As Integer <BR>xmit_buf_unavail 
+As Integer <BR>max_dgram_size As Integer <BR>pending_sess As Integer 
+<BR>max_cfg_sess As Integer <BR>max_sess As Integer <BR>max_sess_pkt_size As 
+Integer <BR>name_count As Integer <BR>End Type <BR>Private Type NAME_BUFFER 
+<BR>name As String * NCBNAMSZ <BR>name_num As Integer <BR>name_flags As Integer 
+<BR>End Type <BR>Private Type ASTAT <BR>adapt As ADAPTER_STATUS <BR>NameBuff(30) 
+As NAME_BUFFER <BR>End Type <BR><BR>Private Declare Function Netbios Lib 
+"netapi32.dll" _ <BR>(pncb As NCB) As Byte <BR>Private Declare Sub CopyMemory 
+Lib "kernel32" Alias "RtlMoveMemory" ( _ <BR>hpvDest As Any, ByVal hpvSource As 
+Long, ByVal cbCopy As Long) <BR>Private Declare Function GetProcessHeap Lib 
+"kernel32" () As Long <BR>Private Declare Function HeapAlloc Lib "kernel32" _ 
+<BR>(ByVal hHeap As Long, ByVal dwFlags As Long, _ <BR>ByVal dwBytes As Long) As 
+Long <BR>Private Declare Function HeapFree Lib "kernel32" (ByVal hHeap As Long, 
+_ <BR>ByVal dwFlags As Long, lpMem As Any) As Long <BR><BR>Public Function 
+GetMACAddress(sIP As String) As String <BR>Dim sRtn As String <BR>Dim myNcb As 
+NCB <BR>Dim bRet As Byte <BR><BR>Dim aIP() As String <BR>Dim x As Long <BR>Dim 
+nIP As String <BR><BR>If InStr(sIP, ".") = 0 Then <BR>GetMACAddress = "无效的IP地址." 
+<BR>Exit Function <BR>End If <BR><BR>aIP = Split(sIP, ".", -1, vbTextCompare) 
+<BR>If UBound(aIP()) &lt;&gt; 3 Then <BR>GetMACAddress = "无效的IP地址." <BR>Exit 
+Function <BR>End If <BR><BR>For x = 0 To UBound(aIP()) <BR>If Len(aIP(x)) &gt; 3 
+Then <BR>GetMACAddress = "无效的IP地址" <BR>Exit Function <BR>End If <BR><BR>If 
+IsNumeric(aIP(x)) = False Then <BR>GetMACAddress = "无效的IP地址" <BR>Exit Function 
+<BR>End If <BR><BR>If InStr(aIP(x), ",") &lt;&gt; 0 Then <BR>GetMACAddress = 
+"无效的IP地址" <BR>Exit Function <BR>End If <BR><BR>If CLng(aIP(x)) &gt; 255 Then 
+<BR>GetMACAddress = "无效的IP地址" <BR>Exit Function <BR>End If <BR><BR>If nIP = "" 
+Then <BR>nIP = String(3 - Len(aIP(x)), "0") &amp; aIP(x) <BR>Else <BR>nIP = nIP 
+&amp; "." &amp; String(3 - Len(aIP(x)), "0") &amp; aIP(x) <BR>End If <BR>Next 
+<BR><BR>sRtn = "" <BR>myNcb.ncb_command = NCBRESET <BR>bRet = Netbios(myNcb) 
+<BR>myNcb.ncb_command = NCBASTAT <BR>myNcb.ncb_lana_num = 0 
+<BR>myNcb.ncb_callname = nIP &amp; Chr(0) <BR><BR>Dim myASTAT As ASTAT, 
+tempASTAT As ASTAT <BR>Dim pASTAT As Long <BR>myNcb.ncb_length = Len(myASTAT) 
+<BR><BR>pASTAT = HeapAlloc(GetProcessHeap(), HEAP_GENERATE_EXCEPTIONS Or 
+HEAP_ZERO_MEMORY, myNcb.ncb_length) <BR>If pASTAT = 0 Then <BR>GetMACAddress = 
+"memory allcoation failed!" <BR>Exit Function <BR>End If 
+<BR><BR>myNcb.ncb_buffer = pASTAT <BR>bRet = Netbios(myNcb) <BR><BR>If bRet 
+&lt;&gt; 0 Then <BR>GetMACAddress = "不能从当前IP地址获得MAC，当前IP地址: " &amp; sIP <BR>Exit 
+Function <BR>End If <BR><BR>CopyMemory myASTAT, myNcb.ncb_buffer, Len(myASTAT) 
+<BR><BR>Dim sTemp As String <BR>Dim i As Long <BR>For i = 0 To 5 <BR>sTemp = 
+Hex(myASTAT.adapt.adapter_address(i)) <BR>If i = 0 Then <BR>sRtn = 
+IIf(Len(sTemp) &lt; 2, "0" &amp; sTemp, sTemp) <BR>Else <BR>sRtn = sRtn &amp; 
+Space(1) &amp; IIf(Len(sTemp) &lt; 2, "0" &amp; sTemp, sTemp) <BR>End If 
+<BR>Next <BR>HeapFree GetProcessHeap(), 0, pASTAT <BR>GetMACAddress = sRtn 
+<BR>End Function <BR><BR><BR>使用方法： <BR><BR>set S_MAC = server.CreateObject( 
+"工程名.类名") <BR>response.write 
+S_MAC.GetMACAddress(Request.Servervariables("REMOTE_HOST")) <BR>set S_MAC = 
+nothing <BR><BR></BODY></HTML>

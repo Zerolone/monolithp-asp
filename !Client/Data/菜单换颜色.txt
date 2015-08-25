@@ -1,0 +1,238 @@
+{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 System;}}
+\viewkind4\uc1\pard\lang2052\f0\fs16       \'c8\'e7\'b9\'fb\'d2\'aa\'ca\'b5\'cf\'d6\'d7\'d4\'b6\'a8\'d2\'e5\'b2\'cb\'b5\'a5\'be\'cd\'d0\'e8\'d2\'aa\'d4\'da\'bb\'e6\'d6\'c6\'b2\'cb\'b5\'a5\'ca\'b1\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'b5\'c4\'b4\'f3\'d0\'a1\'d2\'d4\'ca\'ca\'d3\'a6\'d4\'da\'b2\'cb\'b5\'a5\'c9\'cf\'bb\'e6\'d6\'c6\'cd\'bc\'d0\'ce\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'d9\'d4\'da\'c9\'cf\'c3\'e6\'bb\'e6\'d6\'c6\'d7\'d4\'bc\'ba\'cb\'f9\'d0\'e8\'d2\'aa\'b5\'c4\'b2\'cb\'b5\'a5\'d0\'a7\'b9\'fb\'a1\'a3\'d4\'daDelphi\'d6\'d0\'a3\'ac\'c3\'bf\'d2\'bb\'b8\'f6\'b2\'cb\'b5\'a5\'cf\'ee\'b6\'d4\'d3\'a6\'d2\'bb\'b8\'f6TmenuItem\'bf\'d8\'bc\'fe\'a3\'ac\'d5\'e2\'c0\'e0\'bf\'d8\'bc\'fe\'b6\'bc\'d3\'d0\'c1\'bd\'b8\'f6\'ca\'c2\'bc\'fe\'a3\'baOnDrawItem\'ba\'cdOnMeasureItem\'a3\'ac\'d2\'aa\'ca\'b5\'cf\'d6\'d7\'d4\'b6\'a8\'d2\'e5\'b2\'cb\'b5\'a5\'a3\'ac\'ca\'d7\'cf\'c8\'d2\'aa\'bd\'e9\'c9\'dc\'d2\'bb\'cf\'c2\'d5\'e2\'c1\'bd\'b8\'f6\'ca\'c2\'bc\'fe\'a3\'ba
+\par       OnMeasureItem\'ca\'c2\'bc\'fe\'b5\'c4\'b6\'a8\'d2\'e5\'c8\'e7\'cf\'c2\'a3\'ba
+\par       type TMenuMeasureItemEvent = procedure (Sender: TObject; ACanvas: TCanvas; 
+\par 
+\par       var Width, Height: Integer) of object;
+\par       property OnMeasureItem: TMenuMeasureItemEvent;
+\par       \'b8\'c3\'ca\'c2\'bc\'fe\'d4\'da\'b2\'cb\'b5\'a5\'cc\'f5\'bc\'e0\'b2\'e2\'d7\'d4\'c9\'ed\'b5\'c4\'b3\'df\'b4\'e7\'ca\'b1\'b2\'fa\'c9\'fa\'a3\'ac\'c6\'e4\'d6\'d0\'b2\'ce\'ca\'fdAcanvas\'b6\'a8\'d2\'e5\'bb\'e6\'d6\'c6\'b5\'c4\'bb\'e6\'cd\'bc\'b6\'d4\'cf\'f3\'a3\'ac\'b2\'ce\'ca\'fdWidth\'a1\'a2Height\'d6\'c6\'b6\'a8\'b2\'cb\'b5\'a5\'cf\'ee\'b5\'c4\'c4\'ac\'c8\'cf\'b3\'df\'b4\'e7\'a3\'ac\'d7\'a2\'d2\'e2\'b5\'bd\'d5\'e2\'c1\'bd\'b8\'f6\'b6\'a8\'d2\'e5\'c7\'b0\'b5\'c4var\'c1\'cb\'c2\'f0\'a3\'ac\'cb\'b5\'c3\'f7\'c4\'e3\'bf\'c9\'d2\'d4\'d4\'daOnMeasureItem\'ca\'c2\'bc\'fe\'b4\'a6\'c0\'ed\'ba\'af\'ca\'fd\'d6\'d0\'b8\'c4\'b1\'e4\'d5\'e2\'c1\'bd\'b8\'f6\'d6\'b5\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'b5\'c4\'b4\'f3\'d0\'a1\'a1\'a3
+\par       OnDrawItem\'ca\'c2\'bc\'fe\'b5\'c4\'b6\'a8\'d2\'e5\'c8\'e7\'cf\'c2\'a3\'ba
+\par       type TMenuDrawItemEvent = procedure (Sender: TObject; ACanvas: TCanvas; 
+\par       ARect: TRect; Selected: Boolean) of object;
+\par       property OnDrawItem: TMenuDrawItemEvent;
+\par       \'b8\'c3\'ca\'c2\'bc\'fe\'d4\'da\'b2\'cb\'b5\'a5\'bb\'e6\'d6\'c6\'ca\'b1\'d2\'fd\'b7\'a2\'a3\'ac\'c6\'e4\'d6\'d0\'b2\'ce\'ca\'fdAcanvas\'b6\'a8\'d2\'e5\'b2\'cb\'b5\'a5\'bb\'e6\'d6\'c6\'b6\'d4\'cf\'f3\'a3\'ac\'b2\'ce\'ca\'fdArect\'d6\'c6\'b6\'a8\'b2\'cb\'b5\'a5\'b5\'c4\'bb\'e6\'d6\'c6\'c7\'f8\'d3\'f2\'a3\'ac\'b2\'ce\'ca\'fdSelected\'b6\'a8\'d2\'e5\'b5\'b1\'c7\'b0\'b2\'cb\'b5\'a5\'cf\'ee\'ca\'c7\'b7\'f1\'b1\'bb\'d1\'a1\'d6\'d0\'a1\'a3
+\par       \'b4\'d3\'c9\'cf\'c3\'e6\'b5\'c4\'bd\'e9\'c9\'dc\'bf\'c9\'d2\'d4\'bf\'b4\'b5\'bd\'a3\'ac\'d2\'aa\'ca\'b5\'cf\'d6\'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4\'b2\'cb\'b5\'a5\'a3\'ac\'d6\'bb\'d2\'aa\'d4\'daOnMeasureItem\'ca\'c2\'bc\'fe\'d6\'d0\'b1\'e0\'d0\'b4\'b4\'fa\'c2\'eb\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'cf\'ee\'b5\'c4\'b3\'df\'b4\'e7\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'daOnDrawItem\'ca\'c2\'bc\'fe\'d6\'d0\'bb\'e6\'d6\'c6\'d7\'d4\'bc\'ba\'d0\'e8\'d2\'aa\'b5\'c4\'d0\'a7\'b9\'fb\'be\'cd\'bf\'c9\'d2\'d4\'c1\'cb\'a1\'a3
+\par       \'cf\'c2\'c3\'e6\'ce\'d2\'cd\'b4\'b9\'fd\'be\'df\'cc\'e5\'b5\'c4\'b7\'b6\'c0\'fd\'c0\'b4\'d7\'f6\'cb\'b5\'c3\'f7\'a3\'ac\'d5\'e2\'b8\'f6\'b7\'b6\'c0\'fd\'ca\'c7\'ca\'b9\'d7\'d4\'bc\'ba\'b5\'c4\'b2\'cb\'b5\'a5\'ca\'b5\'cf\'d6\'cf\'f3Windows\'bf\'aa\'ca\'bc\'b2\'cb\'b5\'a5\'d2\'bb\'d1\'f9\'b5\'c4\'cf\'d4\'ca\'beBanner\'cc\'f5\'b5\'c4\'b9\'a6\'c4\'dc\'a1\'a3\'cd\'ac\'ca\'b1\'d5\'e2\'b8\'f6\'b3\'cc\'d0\'f2\'bb\'b9\'c4\'dc\'ca\'b5\'cf\'d6\'b6\'d4\'b1\'bb\'d1\'a1\'d6\'d0\'b5\'c4\'b2\'cb\'b5\'a5\'cc\'f5\'bd\'f8\'d0\'d0\'bd\'a5\'b1\'e4\'c9\'ab\'cc\'ee\'b3\'e4\'a1\'a3\'b3\'cc\'d0\'f2\'b5\'c4\'cb\'bc\'c2\'b7\'ca\'c7\'d5\'e2\'d1\'f9\'b5\'c4\'a3\'ac\'ca\'d7\'cf\'c8\'bd\'a8\'c1\'a2\'d2\'bb\'b8\'f6\'b3\'a4\'cc\'f5\'d0\'cd\'b5\'c4\'ce\'bb\'cd\'bc\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'da\'c3\'bf\'d2\'bb\'b8\'f6\'b2\'cb\'b5\'a5\'cc\'f5\'b5\'c4OnMeasureItem\'ca\'c2\'bc\'fe\'d6\'d0\'b8\'f9\'be\'dd\'d2\'aa\'cf\'d4\'ca\'be\'d4\'da\'b2\'cb\'b5\'a5\'c9\'cf\'b5\'c4\'ce\'c4\'b1\'be\'ba\'cd\'cd\'bc\'cf\'f1\'d2\'d4\'bc\'b0\'b3\'cc\'d0\'f2\'b5\'c4\'d0\'e8\'d2\'aa\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'cf\'ee\'b5\'c4\'bf\'ed\'b6\'c8\'ba\'cd\'b8\'df\'b6\'c8\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'daOnDrawItem\'ca\'c2\'bc\'fe\'d6\'d0\'bd\'ab\'ce\'bb\'cd\'bc\'d6\'d0\'b5\'c4\'cf\'e0\'d3\'a6\'b2\'bf\'b7\'d6\'bf\'bd\'b1\'b4\'b5\'bd\'b2\'cb\'b5\'a5\'cf\'ee\'c9\'cf\'a1\'a3\'c8\'e7\'b9\'fb\'b8\'c3\'b2\'cb\'b5\'a5\'cc\'f5\'b1\'bb\'d1\'a1\'d6\'d0\'a3\'ac\'ca\'d7\'cf\'c8\'d2\'aa\'b8\'c4\'b1\'e4Acanvas\'b2\'ce\'ca\'fd\'b5\'c4\'bb\'ad\'cb\'a2\'d1\'d5\'c9\'ab\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'d9\'d2\'c0\'b4\'ce\'cc\'ee\'b3\'e4\'b2\'cb\'b5\'a5\'cc\'f5\'c9\'cf\'b5\'c4\'cf\'e0\'d3\'a6\'b2\'bf\'b7\'d6\'a3\'ac\'d5\'e2\'d1\'f9\'be\'cd\'ca\'b5\'cf\'d6\'c1\'cb\'b6\'d4\'d1\'a1\'d6\'d0\'b5\'c4\'b2\'cb\'b5\'a5\'cc\'f5\'ca\'b5\'cf\'d6\'bd\'a5\'b1\'e4\'c9\'ab\'cc\'ee\'b3\'e4\'a1\'a3\'d7\'ee\'ba\'f3\'bd\'ab\'ce\'c4\'b1\'be\'ca\'e4\'b3\'f6\'b5\'bd\'b2\'cb\'b5\'a5\'cc\'f5\'c9\'cf\'a1\'a3
+\par       \'cf\'c2\'c3\'e6\'c0\'b4\'bd\'e9\'c9\'dc\'be\'df\'cc\'e5\'b5\'c4\'b3\'cc\'d0\'f2\'a3\'ac\'ca\'d7\'cf\'c8\'c0\'fb\'d3\'c3\'cd\'bc\'cf\'f1\'c8\'ed\'bc\'fe\'bd\'a8\'c1\'a2\'d2\'bb\'b8\'f6\'b3\'a4\'cc\'f5\'d0\'cd\'b5\'c4\'ce\'bb\'cd\'bc\'ce\'c4\'bc\'fe\'a3\'a8\'c4\'e3\'bf\'c9\'d2\'d4\'b8\'f9\'be\'dd\'c4\'e3\'b5\'c4\'d0\'e8\'d2\'aa\'c9\'e8\'b6\'a8\'cd\'bc\'cf\'f1\'b5\'c4\'b8\'df\'bf\'ed\'b1\'c8\'a3\'ac\'d4\'da\'ce\'d2\'b5\'c4\'cd\'bc\'cf\'f1\'d6\'d0\'ca\'c710:1\'a3\'a9\'a1\'a3\'d4\'daDelphi\'d6\'d0\'bd\'a8\'c1\'a2\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b9\'a4\'b3\'cc\'a3\'ac\'d4\'daForm1\'d6\'d0\'bc\'d3\'c8\'eb\'d2\'bb\'b8\'f6TImage\'bf\'d8\'bc\'fe\'a3\'ac\'bd\'ab\'bf\'d8\'bc\'fe\'b5\'c4AutoSize\'ca\'f4\'d0\'d4\'c9\'e8\'d6\'c3\'ce\'aaTrue\'a1\'a3\'c8\'bb\'ba\'f3\'d4\'daForm1\'d6\'d0\'bc\'d3\'c8\'eb\'d2\'bb\'b8\'f6TMainMenu\'bf\'d8\'bc\'fe\'a3\'ac\'bd\'ab\'cb\'fc\'b5\'c4OwnerDraw\'ca\'f4\'d0\'d4\'c9\'e8\'d6\'c3\'ce\'aaTrue\'a3\'a8\'d5\'e2\'d2\'bb\'b5\'e3\'ba\'dc\'d6\'d8\'d2\'aa\'a3\'ac\'b7\'f1\'d4\'f2\'b3\'cc\'d0\'f2\'ce\'de\'b7\'a8\'ca\'b5\'cf\'d6\'a3\'a9\'d4\'da\'b8\'c3TMainMenu\'cf\'c2\'bc\'d3\'c8\'eb6\'b8\'f6TMenuItem\'b6\'d4\'cf\'f3\'a3\'a8\'ca\'f3\'b1\'ea\'d3\'d2\'bd\'a1\'b5\'e3\'bb\'f7TMainMenu\'bf\'d8\'bc\'fe\'a3\'ac\'c8\'bb\'ba\'f3\'b5\'e3\'bb\'f7\'b5\'af\'b3\'f6\'b2\'cb\'b5\'a5\'b5\'c4Menu 
+\par       Designer \'cf\'ee\'a3\'ac\'be\'cd\'bf\'c9\'d2\'d4\'d4\'da\'c9\'e8\'bc\'c6\'b4\'b0\'bf\'da\'d6\'d0\'cc\'ed\'bc\'d3\'b2\'cb\'b5\'a5\'cc\'f5\'c1\'cb\'a3\'a9\'a3\'ac\'bd\'ab\'cb\'fc\'c3\'c7\'b5\'c4Name\'ca\'f4\'d0\'d4\'b7\'d6\'b1\'f0\'c9\'e8\'d6\'c3\'ce\'aa Caption1\'a1\'a2Caption2\'a1\'a2\'a1\'ad\'a1\'a2Caption6\'a1\'a3
+\par       \'cf\'c2\'c3\'e6\'ca\'c7\'be\'df\'cc\'e5\'b5\'c4\'b3\'cc\'d0\'f2\'c7\'e5\'b5\'a5\'a3\'ba
+\par       unit OwnerMenu;
+\par 
+\par       interface
+\par 
+\par       uses
+\par       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+\par       Menus, ExtCtrls, StdCtrls, ImgList;
+\par 
+\par       type
+\par       TForm1 = class(TForm)
+\par       MainMenu1: TMainMenu;
+\par       Main1: TMenuItem;
+\par       Caption1: TMenuItem;
+\par       Caption2: TMenuItem;
+\par       Caption3: TMenuItem;
+\par       Caption4: TMenuItem;
+\par       Caption5: TMenuItem;
+\par       Caption6: TMenuItem;
+\par       Image1: TImage;
+\par       procedure Caption1MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption2MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption3MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption4MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption5MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption6MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       procedure Caption1DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       procedure Caption2DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       procedure Caption3DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       procedure Caption4DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       procedure Caption5DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       procedure Caption6DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       private
+\par       \{ Private declarations \}
+\par       public
+\par       procedure DrawItem(Sender: TMenuItem; ACanvas: TCanvas;ARect: TRect;
+\par       Selected: Boolean;strOUt:String);
+\par       \{ Public declarations \}
+\par       end;
+\par 
+\par       var
+\par       Form1: TForm1;
+\par       i,iH,Ind,iW,iRate:Integer;
+\par       rTemp:TRect;
+\par       iG1,iG2:Integer;
+\par 
+\par       implementation
+\par 
+\par       \{$R *.DFM\}
+\par 
+\par       procedure TForm1.DrawItem(Sender: TMenuItem; ACanvas: TCanvas;ARect: 
+\par TRect;
+\par       Selected: Boolean;strOut:String);
+\par       var
+\par       j:Integer;
+\par       begin
+\par       i:=ARect.Bottom -ARect.Top; //\'bb\'f1\'b5\'c3\'cc\'f9\'cd\'bc\'b5\'c4\'b8\'df\'b6\'c8\'ba\'cd\'bf\'ed\'b6\'c8
+\par       Ind:=Sender.MenuIndex;
+\par       iH:=Round(Image1.Height/6*Ind); //\'bb\'f1\'b5\'c3\'cc\'f9\'cd\'bc\'ce\'bb\'d6\'c3
+\par       //\'bd\'abImage\'c9\'cf\'cf\'e0\'d3\'a6\'ce\'bb\'d6\'c3\'b5\'c4\'ce\'bb\'cd\'bc\'b8\'b4\'d6\'c6\'b5\'bd\'b2\'cb\'b5\'a5\'c9\'cf
+\par       StretchBlt(ACanvas.Handle,ARect.Left,ARect.Top,iW,i,Image1.Canvas.Handle,0,iH,
+\par       Image1.Width,Round(Image1.Height/6),SRCCOPY);
+\par 
+\par       if Selected then begin //\'b8\'c3\'b2\'cb\'b5\'a5\'cf\'ee\'b1\'bb\'d1\'a1\'d6\'d0
+\par       ACanvas.Font.Color := clWhite;
+\par       rTemp:=ARect;
+\par       rTemp.Left := rTemp.left+iW;
+\par       iG1:=Round((rTemp.Right - rTemp.Left)/10);
+\par 
+\par       rTemp.Right := rTemp.Left +iG1;
+\par       for j:= 0 to 9 do begin //\'cd\'a8\'b9\'fd\'d1\'ad\'bb\'b7\'c9\'e8\'d6\'c3\'c9\'ab\'b2\'ca\'bd\'a5\'b1\'e4\'d0\'a7\'b9\'fb
+\par       ACanvas.Brush.Color := RGB(0,0,j*25);
+\par       ACanvas.FillRect(rTemp);
+\par 
+\par       rTemp.Left := rTemp.Left +iG1;
+\par       rTemp.Right := rTemp.Left +iG1;
+\par       end;
+\par       end
+\par       else begin //\'b8\'c3\'b2\'cb\'b5\'a5\'cf\'ee\'c3\'bb\'d3\'d0\'b1\'bb\'d1\'a1\'d6\'d0
+\par       ACanvas.Brush.Color := cl3DLight; //\'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0\'c9\'ab\'ce\'aa\'c7\'b3\'bb\'d2
+\par       rTemp:=ARect;
+\par       rTemp.Left := rTemp.left+iW;
+\par       ACanvas.FillRect(rTemp);
+\par       ACanvas.Font.Color := clBlack;
+\par       end;
+\par       //\'c9\'e8\'d6\'c3Canvas\'b5\'c4\'bb\'ad\'b1\'ca\'cc\'ee\'b3\'e4\'c4\'a3\'ca\'bd\'ce\'aa\'cd\'b8\'c3\'f7
+\par       ACanvas.Brush.Style:=bsClear;
+\par       //\'d4\'da\'b2\'cb\'b5\'a5\'c9\'cf\'ca\'e4\'b3\'f6\'ce\'c4\'d7\'d6
+\par       ACanvas.TextOut(ARect.Left+iW+5,ARect.Top,strOut);
+\par       end;
+\par 
+\par       procedure TForm1.Caption1MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       //\'d4\'daOnMeasureItem\'ca\'c2\'bc\'fe\'d6\'d0\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'b5\'c4\'bf\'ed\'b6\'c8\'ba\'cd\'b8\'df\'b6\'c8\'a3\'ac\'cf\'c2\'c3\'e65\'b8\'f6\'b3\'cc\'d0\'f2\'cd\'ac
+\par       //\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'b5\'c4\'bf\'ed\'b6\'c8\'ba\'cd\'b8\'df\'b6\'c8\'d2\'d4\'c8\'dd\'c4\'c9\'ce\'c4\'b1\'be
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5;
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW; //\'b8\'f9\'be\'dd\'bc\'c6\'cb\'e3\'b8\'c4\'b1\'e4\'b2\'cb\'b5\'a5\'bf\'ed\'b6\'c8\'d2\'d4\'c8\'dd\'c4\'c9\'b8\'bd\'bc\'d3\'b5\'c4\'ce\'c4\'b1\'be
+\par       end;
+\par 
+\par       procedure TForm1.Caption2MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5; 
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW;
+\par       end;
+\par 
+\par       procedure TForm1.Caption3MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5; 
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW;
+\par       end;
+\par 
+\par       procedure TForm1.Caption4MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5; 
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW;
+\par       end;
+\par 
+\par       procedure TForm1.Caption5MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5; 
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW;
+\par       end;
+\par 
+\par       procedure TForm1.Caption6MeasureItem(Sender: TObject; ACanvas: TCanvas;
+\par       var Width, Height: Integer);
+\par       begin
+\par       Height:=ACanvas.TextHeight('Caption1')+5;
+\par       Width:=ACanvas.TextWidth('Caption1')+5; 
+\par       iRate:=Round(Image1.Height/(Height*6));
+\par       iW:=Round(Image1.Width /iRate);
+\par       Width:=Width+iW;
+\par       end;
+\par 
+\par       procedure TForm1.Caption1DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption1');
+\par       end;
+\par 
+\par       procedure TForm1.Caption2DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption2');
+\par       end;
+\par 
+\par       procedure TForm1.Caption3DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption3');
+\par       end;
+\par 
+\par       procedure TForm1.Caption4DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption4');
+\par       end;
+\par 
+\par       procedure TForm1.Caption5DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption5');
+\par       end;
+\par 
+\par       procedure TForm1.Caption6DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       DrawItem(TMenuItem(Sender),ACanvas,ARect,Selected,'Caption6');
+\par       end;
+\par 
+\par       end.
+\par 
+\par       \'d7\'dc\'d6\'ae\'a3\'ac\'be\'cd\'ca\'c7\'c0\'fb\'d3\'c3\'b2\'cb\'b5\'a5\'bf\'d8\'bc\'fe\'b5\'c4OnDrawItem\'d2\'d4\'bc\'b0OnMeasureItem\'ca\'c2\'bc\'fe\'b4\'a6\'c0\'ed\'ba\'af\'ca\'fd\'a1\'a3
+\par 
+\par \'b2\'b9\'b3\'e4\'a3\'ba
+\par 
+\par 
+\par \'ca\'d7\'cf\'c8\'bd\'ab\'b2\'cb\'b5\'a5\'b5\'c4ownerdraw\'ca\'f4\'d0\'d4\'c9\'e8\'d6\'c3\'ce\'aatrue;\'c8\'bb\'ba\'f3\'d4\'da\'b2\'cb\'b5\'a5\'cf\'ee\'b5\'c4drawitem\'d6\'d0\'d0\'b4\'c8\'eb\'b4\'fa\'c2\'eb\'bc\'b4\'bf\'c9\'a1\'a3
+\par       procedure TForm1.New1DrawItem(Sender: TObject; ACanvas: TCanvas;
+\par       ARect: TRect; Selected: Boolean);
+\par       begin
+\par       acanvas.Font.Color:=clred;
+\par       if selected then
+\par       SetBkColor(acanvas.handle,clgreen)
+\par       else
+\par       setBkcolor(acanvas.handle,clblue);
+\par       acanvas.TextRect(arect,0,0,new1.caption);
+\par       end;
+\par }
+ 

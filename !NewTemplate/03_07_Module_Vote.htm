@@ -1,0 +1,23 @@
+<table cellspacing="0" cellpadding="4" width="100%" border="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title" align="left" width="100%">
+		<img height="8" src="../images/nav_m.gif" width="8" border="0"> 投票</td>
+	</tr>
+	<tr>
+		<td class="Board_Sub">{Vote_Title}</td>
+	</tr>
+	<iframe name="Vote_Add" width="0" height="0"></iframe>
+	<form method="Post" action="/Vote/Vote.asp" target="Vote_Add">
+		{Vote_String}
+		<tr align="middle">
+			<td class="Board_Foot" height="26">
+			<a href="/Vote/Default.asp" target="_blank">查看结果和回复</a><p>
+			<input type="hidden" name="Vote_ID" value="{Vote_ID}">
+			<input class="InputBox" type="submit" value=" 我来投一票" name="Submit1"></p>
+			</td>
+		</tr>
+	</form>
+	<tr>
+		<td class="Board_Foot" height="5" colspan="2">{Monolith_Sep}</td>
+	</tr>
+</table>

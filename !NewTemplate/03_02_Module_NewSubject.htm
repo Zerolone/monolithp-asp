@@ -1,0 +1,21 @@
+<table cellspacing="0" cellpadding="4" width="100%" border="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title" align="left" width="100%">
+		<img height="8" src="/images/nav_m.gif" width="8" border="0"> 最新的 5 个话题</td>
+	</tr>
+	<tr>
+		<td class="row1" valign="top">
+		<!--Split-->
+		<a target="_blank" href="/MyBBS/ListView.asp?Board_ID={Board_ID}&BBS_ID={BBS_ID}">
+		<img alt="查看最后发表的帖子" src="/mybbs/folder_post_icons/icon{BBS_Icon}.gif" align="absMiddle" border="0"> 
+		{BBS_Subject}</a><br>
+		最新发表人:<a target="_blank" href="/Users/Info.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a><br>
+		论坛:<a target="_blank" href="/MyBBS/List.asp?Board_ID={Board_ID}">{BBS_Board_Name}</a><br>
+		发表: {BBS_PostTime}<br>
+		<br>
+		<!--Split--></td>
+	</tr>
+	<tr>
+		<td class="Board_Foot" height="5">{Monolith_Sep}</td>
+	</tr>
+</table>

@@ -1,0 +1,531 @@
+<style>
+<!--
+td
+	{
+		font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; 
+		font-size: 12px; 
+		word-break: break-all 
+	}
+
+body
+
+	{
+		font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; 
+		font-size: 12px; 
+		word-break: break-all 
+	}
+
+a:link, a:visited, a:active
+	{	
+		background: transparent;	
+		color: #3A4F6C;	
+		text-decoration: none;
+	}
+	
+a:hover
+	{
+		color: #5176B5;
+	}
+
+.InputBox
+	{	
+		border: 1px solid #999999
+	}
+
+.desc { color:#434951 }
+
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+
+.Board_Top
+	{
+		background-image: url("images/tile_back.gif");
+	}
+
+.Board_Table
+	{
+		border: 1px solid #000000;
+	}
+
+.Board_Title
+	{
+		background-image: url("images/tile_back.gif");
+		height:32; 
+		padding:6; 
+		margin-top:1;
+		border-top:1;
+		color:#FFFFFF;  
+		font-weight:bold
+	}
+
+.Board_Sub
+	{
+		background-image: url("images/tile_sub.gif"); 
+		height:24; 
+		padding:6; 
+		margin-top:1;
+		border-top:1;  
+		color: #3A4F6C;
+		font-weight:bold
+	}
+	
+.Board_Foot
+	{
+		background-color: #BCD0ED; 
+		color:#3A4F6C;
+	}
+
+.List_Split
+	{
+		background-color: #C2CFDF; 
+		color:#4C77B6;
+		height:24; 
+	}	
+
+.List_Head
+	{ 
+		background-color: #D1DCEB; 
+		color:#3A4F6C;
+		font-weight:bold;
+		padding:7px;
+		margin-top:1px 
+	}
+	
+.List_Left
+	{ 
+		background-color: #F5F9FD; 
+		padding:6px; 
+		margin-top:1px;
+		border-top:1px solid #C2CFDF; 
+		border-right:1px solid #C2CFDF; 
+	}
+
+.List_Right
+	{
+		background-color: #F5F9FD; 
+		padding:6px; 
+		margin-top:1px;
+		border-top:1px solid #C2CFDF; 
+	}
+
+.row1 { background-color: #E4EAF2 }
+.row2 { background-color: #DFE6EF }	
+-->
+</style>
+<!--Split-->
+<table width="100%" cellspacing="0" border="0" class="Board_Table">
+	<tr>
+		<td class="Board_Top"><img border="0" src="images/logo4.gif"></td>
+	</tr>
+	<tr height="26">
+		<td class="Board_Sub">
+		<table cellspacing="0" cellpadding="0" width="100%">
+			<tr>
+				<td><a href="Default.asp">&nbsp;Welcome to MyBBs.&nbsp;&nbsp; Current 
+				Version 1.0(测试期)</a></td>
+				<td width="233"><a href="#">
+				<img src="images/atb_help.gif" border="0"> 帮助</a>&nbsp;&nbsp;
+				<a href="#"><img src="images/atb_search.gif" border="0"> 搜索</a>&nbsp;&nbsp;
+				<a href="#"><img src="images/atb_members.gif" border="0"> 用户</a>&nbsp;&nbsp;
+				<a href="#"><img src="images/atb_calendar.gif" border="0"> 日历</a>&nbsp;
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<!--Split-->
+<table width="100%" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0"> <a href="#">
+		<font color="#FFFFFF">{Board_Name}</font></a></td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td align="middle" width="2%" class="Board_Sub">　</td>
+				<td width="59%" class="Board_Sub">版块</td>
+				<td align="middle" width="7%" class="Board_Sub">主题</td>
+				<td align="middle" width="7%" class="Board_Sub">回复</td>
+				<td width="25%" class="Board_Sub">最新发表信息</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1" align="middle">
+				<img alt="没有新的帖子" src="images/bf_nonew.gif" border="0"></td>
+				<td class="row1"><b>
+				<a href="List.asp?Board_ID={Board_ID}&Board_Name={Board_Name}">
+				<u><font color="#000000">{Board_Name}</font></u></a></b><br>
+				<font color="#434951">{Board_Intro}<br>
+				<i>版主: <a href="ViewUser.asp?Users_ID={Board_LastPostUserID}">{Board_Master}</a></i></font></td>
+				<td class="row2" align="middle">{Board_Topic}</td>
+				<td class="row2" align="middle">{Board_Reply}</td>
+				<td class="row2" nowrap>{Board_LastPostTime}<br>
+				<b>主题:</b>
+				<a title="前往第一篇未读的文章" href="ListView.asp?BBS_ID={Board_LastPostTopicID}&Board_ID={Board_ID}&Board_Name={Board_Name}">
+				{Board_LastPostTopic}</a><br>
+				<b>作者:</b>
+				<a href="ViewUser.asp?Users_ID={Board_LastPostUserID}">{Board_LastPostUser}</a></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<!--Split-->
+<table width="100%" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">&nbsp;<img height="8" src="images/nav_m.gif" width="8" border="0"> 
+		论坛统计</td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td colspan="2" class="List_Head">{Monolith_Stats_AllUsers} 位使用者于最近30分钟内在讨论区活动</td>
+			</tr>
+			<tr>
+				<td width="5%" class="row2">
+				<img alt="活动用户" src="images/user.gif" border="0"></td>
+				<td width="95%" class="row1"><b>{Visitor_Number}</b> 位访客, <b>{Users_Number}</b> 
+				位会员 <b>{Users_Number_Hidden}</b> 位匿名会员<br>
+				{Users_List}</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="List_Head">论坛统计</td>
+			</tr>
+			<tr>
+				<td class="row2" width="5%">
+				<img alt="论坛数据统计" src="images/stats.gif" border="0" width="30" height="30"></td>
+				<td class="row1" align="left" width="95%">我们的会员总共发表了 <b>{Stats_Subject}</b> 
+				篇文章<br>
+				我们有 <b>{Stats_UserNumber}</b> 位注册会员<br>
+				欢迎最新加入的会员: <b><a href="ViewUser.asp?Users_ID={Stats_NewUserID}">
+				{Stats_NewUser}</a></b><br>
+				最高记录曾经于 <b>{Stats_MostTime}</b> 有 <b>{Stats_MostUsers}</b> 位使用者同时在线上.
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="List_Head">联盟网站</td>
+			</tr>
+			<tr>
+				<td class="row2" width="5%">
+				<img alt="联盟网站" src="images/calen.gif" border="0" width="27" height="27"></td>
+				<td class="row1" align="left" width="95%"><a href="#">
+				<img src="Test/logo.gif" border="0" width="88" height="31"></a>
+				<a href="#">
+				<img src="Test/chinap2plogo.gif" border="0" width="88" height="31"></a>
+				<a href="#">
+				<img src="Test/freeipblogo.gif" border="0" width="88" height="31">
+				<img src="Test/justdnlogo.gif" border="0" width="88" height="31">
+				<img src="Test/ld60.jpg" border="0" width="88" height="31">
+				<img src="Test/jinmi.gif" border="0" width="88" height="31"></a><br>
+				<a href="#">落伍者</a> <a href="#">留爱社区</a> <a href="#">江南细雨</a>
+				<a href="#">唯一论坛</a> <a href="#">虚拟地带</a></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<!--Split-->
+<table width="100%" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0">
+		<a href="#"><font color="#FFFFFF">{Board_Name}</font></a></td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<!--Split-->
+			<tr>
+				<td align="middle" class="Board_Sub">　</td>
+				<td align="middle" class="Board_Sub">　</td>
+				<td width="45%" class="Board_Sub">主题名称</td>
+				<td nowrap align="middle" width="14%" class="Board_Sub">主题发起人</td>
+				<td nowrap align="middle" width="7%" class="Board_Sub">回复</td>
+				<td nowrap align="middle" width="7%" class="Board_Sub">点阅</td>
+				<td nowrap align="left" width="27%" class="Board_Sub">最后发表</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="left" colspan="5"><b>置顶主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">
+				<img src="folder_post_icons/icon{BBS_Icon}.gif" border="0"></td>
+				<td class="row1">
+				<a title="这个主题开始于: {BBS_PostTime}" href="ListView.asp?BBS_ID={BBS_ID}&Board_ID={Board_ID}&Board_Name={Board_Name}">
+				{BBS_Subject}</a> 　<span class="desc">{BBS_SubjectDesc}</span>
+				</td>
+				<td class="row1" align="middle">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="row1" align="middle">{BBS_Reply}</td>
+				<td class="row1" align="middle">{BBS_View}</td>
+				<td class="row1"><span class="desc">{BBS_LastPostTime}</span><br>
+				最后发表: <b><a href="ViewUser.asp?Users_ID={BBS_LastPostUserID}">{BBS_LastPostUser}</a></b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" align="middle">　</td>
+				<td class="List_Split" colspan="5"><b>板块主题</b></td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1" align="middle">
+				<img alt="没有新的回复" src="images/f_norm_no.gif" border="0"></td>
+				<td class="row2" align="middle">
+				<img src="folder_post_icons/icon{BBS_Icon}.gif" border="0"></td>
+				<td class="row1">
+				<a title="这个主题开始于: {BBS_PostTime}" href="ListView.asp?BBS_ID={BBS_ID}&Board_ID={Board_ID}&Board_Name={Board_Name}">
+				{BBS_Subject}</a> 　<span class="desc">{BBS_SubjectDesc}</span></td>
+				<td class="row2" align="middle">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="row1" align="middle">{BBS_Reply}</td>
+				<td class="row2" align="middle">{BBS_View}</td>
+				<td class="row2"><span class="desc">{BBS_LastPostTime}</span><br>
+				最后发表: <b><a href="ViewUser.asp?Users_ID={BBS_LastPostUserID}">{BBS_LastPostUser}</a></b></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot" height="24">15 用户在当前板块 (13 游客 0 匿名用户)</td>
+	</tr>
+	<tr>
+		<td class="row2" height="24">2 会员:<a href="#">beenieman10</a>,
+		<a href="#">ChRiIiS</a></td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<!--Split-->
+<!--发表主题部分开始-->
+<table width="100%" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<form action="{ThisPage}" method="post" name="ListAddFrm" id="ListAddFrm">
+		<input name="BBS_Board_ID" type="hidden" value="{Board_ID}">
+		<input name="FormPage" type="hidden" value="{FormPage}">
+		<tr>
+			<td class="Board_Title" colspan="2"><b>
+			在 {Board_Name} 发表新的主题</b>
+			</td>
+		</tr>
+		<tr>
+			<td class="List_Head" colspan="2">主题设置</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%">主题名称</td>
+			<td class="List_Right" width="77%">
+			<input class="InputBox" tabindex="1" maxlength="50" size="40" name="BBS_Subject"> 
+			*</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%">主题说明</td>
+			<td class="List_Right" width="77%">
+			<input class="InputBox" tabindex="2" maxlength="40" size="40" name="BBS_SubjectDesc"></td>
+		</tr>
+		<tr>
+			<td class="List_Head" colspan="2">主题内容</td>
+		</tr>
+		<tr>
+			<td class="List_Left" align="middle" width="23%">　</td>
+			<td class="List_Right" valign="top" width="77%">
+			<textarea class="InputBox" tabindex="5" name="BBS_Content" rows="20" cols="80"></textarea> 
+			*</td>
+		</tr>
+		<tr>
+			<td class="List_Left" width="23%"><b>主题图标</b></td>
+			<td class="List_Right" width="77%">
+			<input type="radio" value="1" name="BBS_Icon" checked class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon1.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="2" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon2.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="3" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon3.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="4" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon4.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="5" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon5.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="6" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon6.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="7" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon7.gif" align="middle"><br>
+			<input type="radio" value="8" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon8.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="9" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon9.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="10" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon10.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="11" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon11.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="12" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon12.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="13" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon13.gif" align="middle">&nbsp;&nbsp;
+			<input type="radio" value="14" name="BBS_Icon" class="InputBox">&nbsp;
+			<img src="folder_post_icons/icon14.gif" align="middle"><br>
+			<input type="radio" value="0" name="BBS_Icon" class="InputBox">&nbsp; [ Use None 
+			] </td>
+		</tr>
+		<tr>
+			<td  class="List_Head" colspan="2">
+			<p align="center">
+			<input class="InputBox" tabindex="7" type="submit" value=" 发 表 新 的 主 题 " name="submit">&nbsp;
+			<input class="InputBox" tabindex="8" type="submit" value=" 预 览 主 题 " name="preview">
+			</p>
+			</td>
+		</tr>
+	</form>
+</table>
+<!--发表主题部分结束-->
+<!--Split-->
+<!--主题察看部分开始-->
+<table width="100%" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0">{BBS_Subject}</td>
+	</tr>
+	<tr>
+		<td align="right" width="100%" class="Board_Sub">
+		<a href="#">跟踪主题</a> | <a href="#">邮寄主题</a> | <a href="#">打印主题</a>&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td class="List_Head" width="21%">
+				<a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="List_Head" width="79%">
+				<img src="../images/to_post_off.gif" border="0"> {BBS_PostTime} </td>
+			</tr>
+			<tr>
+				<td class="row1" width="1%" valign="top"><br>
+				发表总数: {Users_Subject}<br>
+				最后登陆: {Users_LastLogin}<br>
+				会员编号: {BBS_PostUserID}<br>
+				　</span></td>
+				<td width="99%" class="row1" valign="top">{BBS_Content}<br>
+				<br>
+				--------------------<br>
+				{Users_Sign}</td>
+			</tr>
+			<tr>
+				<td class="List_Head" width="21%" align="center">
+				　</td>
+				<td class="List_Head" width="79%">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><a href="#">
+						<img alt="Go to the top of the page" src="../images/p_up.gif" border="0"></a></td>
+						<td align="right">
+						<a title="快速回复这个帖子" href="ListAddPost.asp?BBS_Board_ID={Board_ID}&BBS_Root={BBS_ID}&Board_Name={Board_Name}&BBS_Subject={BBS_Subject}"><img alt="Quote Post" src="../images/p_quote.gif" border="0"></a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#8394B2" height="5">
+		<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--></td>
+	</tr>
+<!--帖子列表部分-->
+<!--Split-->
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td class="List_Head" width="21%" ><a href="ViewUser.asp?Users_ID={BBS_PostUserID}">{BBS_PostUser}</a></td>
+				<td class="List_Head" width="79%" height="24">
+				<table border="0" width="100%">
+					<tr>
+						<td><img src="../images/to_post_off.gif" border="0"> {BBS_PostTime}</td>
+						<td align="right">&nbsp;发表于:#{Level}</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="row1" width="1%" valign="top"><br>
+				发表总数: {Users_Subject}<br>
+				最后登陆: {Users_LastLogin}<br>
+				会员编号: {BBS_PostUserID}<br>
+				　</span></td>
+				<td width="99%" class="row1" valign="top"><%=Rs(6)%>{BBS_Content}<br>
+				<br>
+				--------------------<br>
+				{Users_Sign}</td>
+			</tr>
+			<tr>
+				<td class="List_Head" width="21%" align="center">
+				　</td>
+				<td class="List_Head" width="79%">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><a href="#">
+						<img alt="Go to the top of the page" src="../images/p_up.gif" border="0"></a></td>
+						<td align="right">
+						<a title="快速回复这个帖子" href="ListAddPost.asp?BBS_Board_ID={Board_ID}&BBS_Root={BBS_ID}&Board_Name={Board_Name}&BBS_Subject={BBS_Subject}"><img alt="Quote Post" src="../images/p_quote.gif" border="0"></a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#8394B2" height="5">
+		<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--></td>
+	</tr>
+<!--Split-->
+<!--帖子列表部分结束-->
+</table>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><table cellspacing="0" width="100%" height="26" cellpadding="0">
+	<tr>
+		<td align="right" width="100%">
+		<a title="开启快速回复窗口" href="javascript:ShowOrHideTable('FrmFastReply');">
+		<img alt="Fast Reply" src="images/t_qr.gif" border="0" width="89" height="27"></a><a title="快速回复这个帖子" href="ListAddPost.asp?BBS_Board_ID={Board_ID}&BBS_Root={BBS_ID}&Board_Name={Board_Name}&BBS_Subject={BBS_Subject}"><img alt="发表新的主题" src="images/t_reply.gif" border="0" width="89" height="27"></a><a href="ListAdd.asp?Board_ID={Board_I}&Board_Name={Board_Nam}"><img alt="发表新的主题" src="images/t_new.gif" border="0"></a></td>
+	</tr>
+</table>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><table id="FrmFastReply" width="100%" cellspacing="0" cellpadding="0" style="border: 1px solid #000000; display:none;">
+	<form action="ListSave.asp" method="post" name="ReplyTopic">
+		<input name="BBS_Board_ID" type="hidden" value="{Board_ID}">
+		<input name="BBS_Root" type="hidden" value="{BBS_ID}">
+		<tr>
+			<td class="Board_Title">
+			<img height="8" src="images/nav_m.gif" width="8" border="0">快速回复</td>
+		</tr>
+		<tr>
+			<td align="center">
+			<!--分割线-->
+			<img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线--><br>
+			<textarea class="InputBox" tabindex="1" name="BBS_Content" rows="8" cols="70"></textarea><br>
+			<br>
+			<input class="InputBox" type="CheckBox" checked value="yes" name="enablesig"> 
+			启用签名档<br>
+			<br>
+			<input class="InputBox" accesskey="s" tabindex="2" type="submit" value=" 加 入 回 复 " name="submit">
+			<input class="InputBox" onclick="ShowOrHideTable('FrmFastReply');" type="button" value="关闭快速回复" name="qrc"><br>
+			<!--分割线-->
+			<img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线-->
+			</td>
+		</tr>
+	</form>
+</table>

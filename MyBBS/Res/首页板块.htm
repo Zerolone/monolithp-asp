@@ -1,0 +1,68 @@
+<style>
+<!--
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+
+
+td { font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+body{ font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; font-size: 12px; word-break: break-all }
+
+a:link, a:visited, a:active{	background: transparent;	color: #3A4F6C;	text-decoration: none;}
+a:hover{ color: #5176B5;}
+
+.InputBox2						{	border: 1px solid #999999	}
+
+.TdTitle {color: #3A4F6C;  font-weight:bold}
+.darkrow1 { background-color: #C2CFDF; color:#4C77B6; }
+.row4 { background-color: #E4EAF2 }
+.row2 { background-color: #DFE6EF }
+.desc { font-size:10px; color:#434951 }
+.darkrow2 { background-color: #BCD0ED; color:#3A4F6C; }
+
+-->
+</style>
+<table width="100%" cellspacing="0" cellpadding="0" style="border: 1px solid #000000">
+	<tr>
+		<td background="images/tile_back.gif" height="32">&nbsp;<img height="8" src="images/nav_m.gif" width="8" border="0">
+		<b><a href="#"><font color="#FFFFFF">{Board_Name}</font></a></b> </td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td align="middle" width="2%" background="images/tile_sub.gif" height="24">
+				<img height="1" alt="" src="images/blank.gif" width="28"></td>
+				<td width="59%" background="images/tile_sub.gif" height="24" class="TdTitle">
+				版块</td>
+				<td align="middle" width="7%" background="images/tile_sub.gif" height="24" class="TdTitle">
+				主题</td>
+				<td align="middle" width="7%" background="images/tile_sub.gif" height="24" class="TdTitle">
+				回复</td>
+				<td width="25%" background="images/tile_sub.gif" height="24"  class="TdTitle">
+				最新发表信息</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row4" align="middle">
+				<img alt="没有新的帖子" src="images/bf_nonew.gif" border="0"></td>
+				<td class="row4"><b>
+				<a href="List.asp?Board_ID={Board_ID}"><u><font color="#000000">{Board_Name}</font></u></a></b><br>
+				<font color="#434951">{Board_Intro}<br>
+				<i>版主: <a href="#">
+				{Board_Master}</a></i></font></td>
+				<td class="row2" align="middle">{Board_Topic}</td>
+				<td class="row2" align="middle">{Board_Reply}</td>
+				<td class="row2" nowrap>{Board_LastPostTime}<br>
+				<b>主题:</b>
+				<a title="前往第一篇未读的文章" href="#">
+				{Board_LastPostTopic}</a><br>
+				<b>作者:</b>
+				<a href="#">{Board_LastPostUser}</a></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="darkrow2">　</td>
+	</tr>
+</table>

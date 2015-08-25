@@ -1,0 +1,317 @@
+<html>
+
+<head>
+<title>度量衡计算机</title>
+<link href="../../Css/Manage.Css" rel="stylesheet" type="text/css">
+
+<script language="javascript">
+function _otmw(_other,_p1,_this,_p2)
+ {
+  if ((_p1==0)||(_p2==0))
+  {document.formw.textf.value=0;
+   document.formw.textfm.value=0;}
+  else
+  {document.formw.textfm.value=_other*_p1*_p2;}
+ }
+function _mtow(_other,_p1,_this,_p2)
+ { 
+  if ((_p1==0)||(_p2==0))
+  {document.formw.textf.value=0;
+   document.formw.textfm.value=0;}
+  else
+  {document.formw.textf.value=(_this/(_p1*_p2));}
+ }
+
+function _otml(_other,_p1,_this,_p2)
+ {
+  if ((_p1==0)||(_p2==0))
+  {document.forml.textf.value=0;
+   document.forml.textfm.value=0;}
+  else
+  {document.forml.textfm.value=_other*_p1*_p2;}
+ }
+function _mtol(_other,_p1,_this,_p2)
+ { 
+  if ((_p1==0)||(_p2==0))
+  {document.forml.textf.value=0;
+   document.forml.textfm.value=0;}
+  else
+  {document.forml.textf.value=(_this/(_p1*_p2));}
+ }
+
+function _otms(_other,_p1,_this,_p2)
+ {
+  if ((_p1==0)||(_p2==0))
+  {document.forms.textf.value=0;
+   document.forms.textfm.value=0;}
+  else
+  {document.forms.textfm.value=_other*_p1*_p2;}
+ }
+function _mtos(_other,_p1,_this,_p2)
+ { 
+  if ((_p1==0)||(_p2==0))
+  {document.forms.textf.value=0;
+   document.forms.textfm.value=0;}
+  else
+  {document.forms.textf.value=(_this/(_p1*_p2));}
+ }
+
+function _otmv(_other,_p1,_this,_p2)
+ {
+  if ((_p1==0)||(_p2==0))
+  {document.formv.textf.value=0;
+   document.formv.textfm.value=0;}
+  else
+  {document.formv.textfm.value=_other*_p1*_p2;}
+ }
+function _mtov(_other,_p1,_this,_p2)
+ { 
+  if ((_p1==0)||(_p2==0))
+  {document.formv.textf.value=0;
+   document.formv.textfm.value=0;}
+  else
+  {document.formv.textf.value=(_this/(_p1*_p2));}
+ }
+
+
+</script>
+</head>
+
+<body>
+<br>
+<br>
+<center>
+<table border="0" cellspacing="0" cellpadding="0" height="366" width="656">
+	<tr>
+		<td bgcolor="#CCCCCC" height="60">
+		<table border="2" cellpadding="2" width="100%">
+			<form name="formw">
+				<tr>
+					<td  colspan="2">
+					<input type="text" name="textf" value="1" size="20" class="InputBox"> <select name="select1" size="1"  class="InputBox" style="width=100">
+					<option value="0">--英制--</option>
+					<option value="0.4536" selected>磅</option>
+					<option value="0.02835">盎司</option>
+					<option value="1016.0470">英吨</option>
+					<option value="907.1849">美吨</option>
+					<option value="0.0017718">打兰</option>
+					<option value="0.0000648">格令</option>
+					<option value="0.0002">克拉</option>
+					<option value="0">--市制--</option>
+					<option value="50">市担</option>
+					<option value="0.5">市斤</option>
+					<option value="0.05">市两</option>
+					<option value="0.005">市钱</option>
+					<option value="0.0005">市厘</option>
+					<option value="0.00005">市毫</option>
+					<option value="0.000005">市丝</option>
+					</select> <font size="5">=</font> <input type="text" name="textfm" value="0" size="20"  class="InputBox"> <select name="select2" size="1"  class="InputBox" style="width=100">
+					<option value="1" selected>公斤(千克)</option>
+					<option value="1000">克</option>
+					<option value="0.001">吨</option>
+					<option value="100">公担</option>
+					<option value="10000">分克</option>
+					<option value="100000">厘克</option>
+					<option value="1000000">毫克</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="48%">
+					<input  class="InputBox" type="button" name="otm" value="其他-&gt;公制" onclick="_otmw(  
+document.formw.textf.value,  
+document.formw.select1.value,  
+document.formw.textfm.value,  
+document.formw.select2.value);"> <input class="InputBox" type="button" name="mto" value="公制-&gt;其他" onclick="_mtow(document.formw.textf.value,        
+document.formw.select1.value,        
+document.formw.textfm.value,        
+document.formw.select2.value);"></td>
+					<td width="48%">
+					<p align="right"><font face="Arial Black" size="7" color="#FF0000">W</font><font face="Arial Black" size="5">eight</font><font size="4"><b>重量</b></font></p>
+					</td>
+				</tr>
+			</form>
+		</table>
+		</td>
+	</tr>
+	<center><tr>
+		<td height="18">
+		</td>
+	</tr>
+	</center><tr bgcolor="#CCCCCC">
+		<td height="54">
+		<table border="1" width="100%">
+			<form name="forml">
+				<center><tr>
+					<td colspan="2">
+					<input type="text" name="textf" value="1" size="20" class="InputBox"> <select name="select1" size="1" class="InputBox" style="width=100">
+					<option value="0">--英制--</option>
+					<option value="0.0254" selected>英寸</option>
+					<option value="0.3048">英尺</option>
+					<option value="0.9144">码</option>
+					<option value="1609.3">英里</option>
+					<option value="0">--市制--</option>
+					<option value="500">市里</option>
+					<option value="33.3333">市引</option>
+					<option value="3.3333">市丈</option>
+					<option value="0.3333">市尺</option>
+					<option value="0.03333">市寸</option>
+					<option value="0.003333">市分</option>
+					<option value="0.0003333">市厘</option>
+					<option value="0.00003333">市毫</option>
+					</select> <font size="5">=</font><font size="4"><b> </b></font><input type="text" name="textfm" value="0" size="20" class="InputBox"> <select name="select2" size="1" class="InputBox" style="width=100">
+					<option value="1" selected>米</option>
+					<option value="0.001">公里(千米)</option>
+					<option value="0.0005399568">海里</option>
+					<option value="10">分米</option>
+					<option value="100">厘米</option>
+					<option value="1000">毫米</option>
+					<option value="10000">丝米</option>
+					<option value="100000">忽米</option>
+					<option value="1000000">微米</option>
+					</select></td>
+				</tr>
+				</center><tr>
+					<center><td width="50%">
+<input class="InputBox" type="button" name="otm" value="其他-&gt;公制" onclick="_otml(document.forml.textf.value,     
+document.forml.select1.value,     
+document.forml.textfm.value,     
+document.forml.select2.value);"> <input class="InputBox" type="button" name="mto" value="公制-&gt;其他" onclick="_mtol(document.forml.textf.value,                                        
+document.forml.select1.value,                      
+document.forml.textfm.value,                      
+document.forml.select2.value);"> </td>
+					</center><td width="50%">
+					<p align="right"><font face="Arial Black" size="5" color="#FF0000">L</font><font face="Arial Black" size="5">ength</font><b><font size="3">长度</font></b></p>
+					</td>
+				</tr>
+			</form>
+		</table>
+		</td>
+	</tr>
+	<center><tr>
+		<td height="18">
+		</td>
+	</tr>
+	</center><tr bgcolor="#CCCCCC">
+		<td height="54">
+		<table border="1" width="100%">
+			<form name="forms">
+				<center><tr>
+					<td width="100%" colspan="2">
+					<input type="text" name="textf" value="1" size="20" class="InputBox"> <select name="select1" size="1" class="InputBox" style="width=100">
+					<option value="0">--市制--</option>
+					<option value="66666.6667">市顷</option>
+					<option value="666.6667" selected>市亩</option>
+					<option value="66.6667">市分</option>
+					<option value="0.1111">平方市尺</option>
+					<option value="0">--英制--</option>
+					<option value="0.00064516">平方英寸</option>
+					<option value="0.0929">平方英尺</option>
+					<option value="0.8361">平方码</option>
+					<option value="4046.86">英亩</option>
+					<option value="2590000">平方英里</option>
+					</select> <font size="5">=</font> <input type="text" name="textfm" value="0" size="20" class="InputBox"> <select name="select2" size="1" class="InputBox" style="width=100">
+					<option value="0.000001" selected>平方公里</option>
+					<option value="0.0001">公顷</option>
+					<option value="0.01">公亩</option>
+					<option value="1">平方米</option>
+					<option value="100">平方分米</option>
+					<option value="10000">平方厘米</option>
+					</select></td>
+				</tr>
+				</center><tr>
+					<center><td width="50%">
+					<input class="InputBox" type="button" name="otm" value="其他-&gt;公制" onclick="_otms(document.forms.textf.value,             
+document.forms.select1.value,             
+document.forms.textfm.value,             
+document.forms.select2.value);">&nbsp; <input class="InputBox" type="button" name="mto1" value="公制-&gt;其他" onclick="_mtos(document.forms.textf.value,               
+document.forms.select1.value,               
+document.forms.textfm.value,               
+document.forms.select2.value);"></td>
+					</center><td width="50%">
+					<p align="right"><font face="Arial Black" size="5" color="#FF0000">A</font><font face="Arial Black" size="5">rea</font><b><font size="3">面积</font></b></p>
+					</td>
+				</tr>
+			</form>
+		</table>
+		</td>
+	</tr>
+	<center><tr>
+		<td height="18">
+		</td>
+	</tr>
+	</center><tr bgcolor="#CCCCCC">
+		<td height="54">
+		<table border="1" width="100%">
+			<form name="formv">
+				<center><tr>
+					<td width="100%" colspan="2">
+					<input type="text" name="textf" value="1" size="20" class="InputBox"> <select name="select1" size="1" class="InputBox" style="width=100">
+					<option value="0">--英制--</option>
+					<option value="0.0045461" selected>英国加仑</option>
+					<option value="0.0037854">美国液体加仑</option>
+					<option value="0.0044049">美国固体加仑</option>
+					<option value="0.0000163871">立方英寸</option>
+					<option value="0.0283">立方英尺</option>
+					<option value="0.7646">立方码</option>
+					<option value="0">--市制--</option>
+					<option value="0.000037">立方市寸</option>
+					<option value="0.037">立方市尺</option>
+					<option value="37">立方市丈</option>
+					</select> <font size="5">= </font><input type="text" name="textfm" value="0" size="20" class="InputBox"> <select name="select2" size="1" class="InputBox" style="width=100">
+					<option value="1" selected>立方米</option>
+					<option value="1000">立方分米</option>
+					<option value="1000000">立方厘米</option>
+					<option value="1000">升</option>
+					<option value="1000000">毫升</option>
+					</select></td>
+				</tr>
+				</center><tr>
+					<center><td width="50%">
+					<input class="InputBox" type="button" name="otm" value="其他-&gt;公制" onclick="_otmv(document.formv.textf.value,             
+document.formv.select1.value,             
+document.formv.textfm.value,             
+document.formv.select2.value);"> <input class="InputBox" type="button" name="mto" value="公制-&gt;其他" onclick="_mtov(document.formv.textf.value,               
+document.formv.select1.value,               
+document.formv.textfm.value,               
+document.formv.select2.value);"> </td>
+					</center><td width="50%">
+					<p align="right"><font face="Arial Black" size="5" color="#FF0000">V</font><font face="Arial Black" size="5">olume</font><b><font size="3">体积</font></b></p>
+					</td>
+				</tr>
+			</form>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="18">
+		</td>
+	</tr>
+	<tr bgcolor="#CCCCCC">
+		<td height="54">
+		<table border="1" width="100%">
+			<form name="formt">
+				<tr>
+					<td width="100%" colspan="2">
+					<input type="text" name="textf" value="50" size="20" class="InputBox"> <select name="select1" size="1" class="InputBox" style="width=100">
+					<option selected>华氏</option>
+					</select> <font size="5">=</font> <input type="text" name="textfg" value="10" size="20" class="InputBox"> <select name="select2" size="1" class="InputBox" style="width=100">
+					<option selected>摄氏</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="50%">
+					<input class="InputBox" type="button" name="otm" value="华氏-&gt;摄氏" onclick="document.formt.textfg.value=(document.formt.textf.value-32)*5/9"> <input class="InputBox" type="button" name="mto" value="摄氏-&gt;华氏" onclick="document.formt.textf.value=document.formt.textfg.value*9/5+32"></td>
+					<td width="50%">
+					<p align="right"><font face="Arial Black" size="5" color="#FF0000">T</font><font face="Arial Black" size="5">emperature</font><b><font size="3">温度</font></b></p>
+					</td>
+				</tr>
+			</form>
+		</table>
+		</td>
+	</tr>
+	</table>
+</center>
+
+</body>
+
+</html>

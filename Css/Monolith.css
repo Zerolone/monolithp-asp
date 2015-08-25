@@ -1,0 +1,131 @@
+<!--
+td
+	{
+		font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; 
+		font-size: 12px; 
+		word-break: break-all 
+	}
+
+body
+
+	{
+		font-family: Tahoma,Verdana, Tahoma, Arial,Helvetica, sans-serif; 
+		font-size: 12px; 
+		word-break: break-all 
+	}
+
+a:link, a:visited, a:active
+	{	
+		background: transparent;	
+		color: #3A4F6C;	
+		text-decoration: none;
+	}
+	
+a:hover
+	{
+		color: #5176B5;
+	}
+
+.InputBox
+	{	
+		border: 1px solid #999999
+	}
+
+.desc { color:#434951 }
+
+.forminput  { font-size: 11px; font-family: verdana, helvetica, sans-serif; vertical-align: middle }
+
+.Board_Top
+	{
+		background-image: url("images/tile_back.gif");
+		height:68px;
+		font-face:impact;
+		font-size:36;
+		color:#FFFFFF;
+		font-weight:bold;
+	}
+
+.Board_Table
+	{
+		border: 1px solid #000000;
+	}
+
+.Board_Title
+	{
+		background-image: url("images/tile_back.gif");
+		height:32px; 
+		padding:6; 
+		margin-top:1;
+		border-top:1;
+		color:#FFFFFF;  
+		font-weight:bold
+	}
+
+.Board_Sub
+	{
+		background-image: url("images/tile_sub.gif"); 
+		height:24; 
+		padding:6; 
+		margin-top:1;
+		border-top:1;  
+		color: #3A4F6C;
+		font-weight:bold
+	}
+	
+.Board_Foot
+	{
+		background-color: #BCD0ED; 
+		color:#3A4F6C;
+	}
+
+.List_Split
+	{
+		background-color: #C2CFDF; 
+		color:#4C77B6;
+		height:24; 
+	}	
+
+.List_Head
+	{ 
+		background-color: #D1DCEB; 
+		color:#3A4F6C;
+		font-weight:bold;
+		padding:7px;
+		margin-top:1px 
+	}
+	
+.List_Left
+	{ 
+		background-color: #F5F9FD; 
+		padding:6px; 
+		margin-top:1px;
+		border-top:1px solid #C2CFDF; 
+		border-right:1px solid #C2CFDF; 
+	}
+
+.List_Right
+	{
+		background-color: #F5F9FD; 
+		padding:6px; 
+		margin-top:1px;
+		border-top:1px solid #C2CFDF; 
+	}
+
+.row1 { background-color: #E4EAF2 }
+.row2 { background-color: #DFE6EF }	
+
+.Menu
+	{
+		PADDING-LEFT:4px;
+		PADDING-RIGHT:4px;
+		CURSOR:default
+	}
+.MenuOver
+	{
+		PADDING-LEFT:3px;
+		PADDING-RIGHT:3px;
+		BACKGROUND-COLOR:#B5BED6;
+		BORDER:1px solid #08246B;
+		CURSOR:default
+	}
+-->

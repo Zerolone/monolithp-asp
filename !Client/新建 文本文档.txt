@@ -1,0 +1,8 @@
+var
+  Headers: OleVariant;
+begin
+  Headers := 'User-Agent: Zerolone'+ #10#13;
+
+ // Headers := Headers + 'Cookie: ASPSESSIONIDASTQTDRB=OEONGOICDLIJKJDDKAGOLAIF'+ #10#13;
+
+  WebBrowser1.Navigate(Edit1.Text,EmptyParam,EmptyParam,EmptyParam,Headers);

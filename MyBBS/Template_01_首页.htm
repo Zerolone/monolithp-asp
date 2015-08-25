@@ -1,0 +1,73 @@
+<table width="98%" align="center" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">
+		<img height="8" src="images/nav_m.gif" width="8" border="0"> <a href="#">
+		<font color="#FFFFFF">{Board_Name}</font></a></td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td align="middle" width="2%" class="Board_Sub">　</td>
+				<td width="59%" class="Board_Sub">版块</td>
+				<td align="middle" width="7%" class="Board_Sub">主题</td>
+				<td align="middle" width="7%" class="Board_Sub">回复</td>
+				<td width="25%" class="Board_Sub">最新发表信息</td>
+			</tr>
+			<!--Split-->
+			<tr>
+				<td class="row1" align="middle">
+				<img alt="没有新的帖子" src="images/bf_nonew.gif" border="0"></td>
+				<td class="row1"><b>
+				<a href="List.asp?Board_ID={Board_ID}">
+				<u><font color="#000000">{Board_Name}</font></u></a></b><br>
+				<font color="#434951">{Board_Intro}<br>
+				<i>版主: <a href="ViewUser.asp?Users_ID={Board_LastPostUserID}">{Board_Master}</a></i></font></td>
+				<td class="row2" align="middle">{Board_Topic}</td>
+				<td class="row2" align="middle">{Board_Reply}</td>
+				<td class="row2" nowrap>{Board_LastPostTime}<br>
+				<b>主题:</b>
+				<a title="前往第一篇未读的文章" href="ListView.asp?BBS_ID={Board_LastPostTopicID}&Board_ID={Board_ID}">
+				{Board_LastPostTopic}</a><br>
+				<b>作者:</b>
+				<a href="ViewUser.asp?Users_ID={Board_LastPostUserID}">{Board_LastPostUser}</a></td>
+			</tr>
+			<!--Split-->
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<!--Split-->
+<table width="98%" align="center" cellspacing="0" cellpadding="0" class="Board_Table">
+	<tr>
+		<td class="Board_Title">&nbsp;<img height="8" src="images/nav_m.gif" width="8" border="0"> 
+		论坛统计</td>
+	</tr>
+	<tr>
+		<td>
+		<table cellspacing="1" cellpadding="4" width="100%" border="0">
+			<tr>
+				<td colspan="2" class="List_Head">论坛统计</td>
+			</tr>
+			<tr>
+				<td class="row2" width="5%">
+				<img alt="论坛数据统计" src="images/stats.gif" border="0" width="30" height="30"></td>
+				<td class="row1" align="left" width="95%">我们的会员总共发表了 <b>{Stats_Subject}</b> 
+				篇文章<br>
+				我们有 <b>{Stats_UserNumber}</b> 位注册会员<br>
+				欢迎最新加入的会员: <b><a href="ViewUser.asp?Users_ID={Stats_NewUserID}">
+				{Stats_NewUser}</a></b><br>
+				最高记录曾经于 <b>{Stats_MostTime}</b> 有 <b>{Stats_MostUsers}</b> 位使用者同时在线上.
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="Board_Foot">　</td>
+	</tr>
+</table>
+<!--分割线--><img src="images/Blank.gif" border="0" width="1" height="5"><!--分割线-->

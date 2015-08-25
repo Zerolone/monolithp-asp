@@ -1,0 +1,28 @@
+{Monolith_Head}
+{Monolith_Sep}
+<table cellspacing="0" cellpadding="4" width="98%" border="0" class="Board_Table" align="center">
+	<form action="{ThisPage}" method="post" name="FrmPost">
+		<tr align="center">
+			<td class="Board_Title" colspan="7" height="40">
+			<a href="Default.asp?Date_Time={Calendar_LastMonth}"><b>&lt;--</b></a> 
+			{Calendar_Today}
+			<a href="Default.asp?Date_Time={Calendar_NextMonth}"><b>--&gt;</b></a>
+			</td>
+		</tr>
+		<tr align="center">
+			<td class="Board_Sub">星期天</td>
+			<td class="Board_Sub">星期一</td>
+			<td class="Board_Sub">星期二</td>
+			<td class="Board_Sub">星期三</td>
+			<td class="Board_Sub">星期四</td>
+			<td class="Board_Sub">星期五</td>
+			<td class="Board_Sub">星期六</td>
+		</tr>
+		{Calendar_String}
+		<tr>
+			<td class="Board_Foot" height="5" colspan="7">{Monolith_Sep}</td>
+		</tr>
+	</form>
+</table>
+{Monolith_Sep}
+{Monolith_Foot}
